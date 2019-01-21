@@ -1,10 +1,10 @@
-version: '1'
+version: '0.1'
 services:
-  router:
+  proxy:
     #build: .
-    image: nginx:latest
+    image: nginx:alpine
     ports:
-    - "6444:6444"
+    - "8444:8444"
     volumes:
-    - ./template/nginx.cfg:/usr/local/etc/nginx/nginx.cfg
+    - ./template/nginx.conf:/etc/nginx/nginx.conf
 

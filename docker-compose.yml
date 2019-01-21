@@ -1,0 +1,10 @@
+version: '1'
+services:
+  router:
+    #build: .
+    image: nginx:latest
+    ports:
+    - "6444:6444"
+    volumes:
+    - ./template/nginx.cfg:/usr/local/etc/nginx/nginx.cfg
+
